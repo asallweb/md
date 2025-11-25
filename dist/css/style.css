@@ -613,6 +613,12 @@ main.page::after {
 .page ul li {
   list-style-type: disc
 }
+.catalog__sidebar ul {
+  padding-left: 0
+}
+.catalog__sidebar ul li {
+  list-style-type: none
+}
 .header {
   position: relative;
   z-index: 10
@@ -1316,7 +1322,8 @@ main.page::after {
 .product__clear-filter span {
   text-decoration: underline
 }
-.product__clear-filter img {
+.product__clear-filter img,
+.product__clear-filter svg {
   width: 15px;
   height: 15px
 }
