@@ -1077,7 +1077,11 @@ main.page::after {
   position: relative;
   border-radius: 20px;
   background: #f3f3f3;
-  overflow: hidden
+  overflow: hidden;
+  aspect-ratio: 290/330;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 .catalog-card__media-info {
   position: absolute;
@@ -1101,12 +1105,6 @@ main.page::after {
 }
 .catalog-card__media-name {
   color: #000
-}
-.catalog-card__media-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
 }
 .catalog-card__info {
   position: absolute;
@@ -1132,10 +1130,18 @@ main.page::after {
   height: 48px;
   cursor: pointer
 }
+.catalog-card__info-name div {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
 .catalog-card__info-name svg {
   width: 24px;
   height: 24px;
-  transition: all .3s ease-in-out
+  transition: all .3s ease-in-out;
+  flex-shrink: 0
 }
 ._active .catalog-card__info-name svg {
   -webkit-transform: scaleY(-1);
@@ -1196,13 +1202,14 @@ main.page::after {
 .product__slide-main {
   border-radius: 20px;
   overflow: hidden;
-  aspect-ratio: 1/1
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 .product__slide-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
+  max-width: 100%;
+  max-height: 100%
 }
 .product__slider-main-next,
 .product__slider-main-prev {
@@ -1241,10 +1248,8 @@ main.page::after {
   border-color: #000
 }
 .product__slide-small-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
+  max-width: 100%;
+  max-height: 100%
 }
 .product__body {
   flex: 1
