@@ -1486,13 +1486,10 @@ main.page::after {
   border-radius: 15px;
   background: #f3f3f3;
   border: 1px solid #b4b4b4;
-  overflow: hidden
-}
-.busket__item-image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 .busket__item-content {
   flex: 1;
