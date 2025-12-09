@@ -524,6 +524,94 @@ textarea.input {
 .icon-menu {
   display: none
 }
+body::after {
+  content: "";
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+  backdrop-filter: blur(5px)
+}
+.popup-show body::after {
+  opacity: 1
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility .8s ease 0s;
+  visibility: hidden;
+  pointer-events: none
+}
+.popup__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  outline: 0!important
+}
+.popup__title {
+  font-family: SoyuzGroteskBold;
+  letter-spacing: 0;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center
+}
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+.popup__form-btn {
+  margin: 0 auto
+}
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto
+}
+.popup_show .popup__content {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1)
+}
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.popup__content {
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: -webkit-transform .3s ease 0s;
+  transition: transform .3s ease 0s;
+  transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
+  background-color: #eee;
+  padding: 40px 30px 30px 30px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px
+}
+.lock .popup__content {
+  visibility: visible
+}
 .ibg {
   width: 100%;
   height: 100%;
@@ -2101,6 +2189,9 @@ main.page::after {
   .select__option {
     padding-right: 1.25rem
   }
+  .popup__title {
+    font-size: 2.5rem
+  }
   .title-h1 {
     font-size: 6.25rem
   }
@@ -2697,6 +2788,9 @@ main.page::after {
   .select__option {
     padding-right: .625rem
   }
+  .popup__title {
+    font-size: 1.875rem
+  }
   .title-h1 {
     font-size: 2.5rem
   }
@@ -2980,6 +3074,9 @@ main.page::after {
   }
   .select__option {
     padding-right: clamp(.625rem ,.3743315508rem + 1.0695187166vw ,1.25rem)
+  }
+  .popup__title {
+    font-size: clamp(1.875rem ,1.6243315508rem + 1.0695187166vw ,2.5rem)
   }
   .title-h1 {
     font-size: clamp(2.5rem ,.9959893048rem + 6.4171122995vw ,6.25rem)
