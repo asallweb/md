@@ -883,16 +883,16 @@ main.page::after {
   gap: 20px
 }
 .catalog-categories ._colspan-2 {
-  grid-column: span 2;
-  aspect-ratio: 2/1
+  grid-column: span 2
 }
 .category-card {
   position: relative;
   padding: 25px;
   border-radius: 20px;
   overflow: hidden;
-  background: #f3f3f3;
-  aspect-ratio: 1/1
+  background-color: #f3f3f3;
+  border: 4px solid #f3f3f3;
+  height: 305px
 }
 .category-card:hover .category-card__icon {
   -webkit-transform: translateY(6px) translateX(6px);
@@ -1166,12 +1166,14 @@ main.page::after {
 .catalog-card__media {
   position: relative;
   border-radius: 20px;
-  background: #f3f3f3;
+  background-color: #f3f3f3;
   overflow: hidden;
   aspect-ratio: 290/330;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  background: #fff;
+  border: 4px solid #f3f3f3
 }
 .catalog-card__media-info {
   position: absolute;
