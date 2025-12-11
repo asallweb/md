@@ -3900,7 +3900,7 @@
         class Popup {
             constructor(options) {
                 let config = {
-                    logging: true,
+                    logging: false,
                     init: true,
                     attributeOpenButton: "data-popup",
                     attributeCloseButton: "data-close",
@@ -3918,8 +3918,8 @@
                     closeEsc: true,
                     bodyLock: true,
                     hashSettings: {
-                        location: true,
-                        goHash: true
+                        location: false,
+                        goHash: false
                     },
                     on: {
                         beforeOpen: function() {},

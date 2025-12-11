@@ -2104,6 +2104,13 @@ main.page::after {
 .about {
   margin-top: 50px
 }
+.fancybox__container {
+  max-width: 100%
+}
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border-color: #df0000!important;
+  border-width: 2px!important
+}
 .swiper {
   overflow: hidden
 }
