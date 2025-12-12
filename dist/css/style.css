@@ -915,7 +915,8 @@ main.page::after {
   position: relative;
   z-index: 1;
   position: absolute;
-  bottom: 20px
+  bottom: 20px;
+  width: calc(100% - 75px)
 }
 .category-card__title {
   font-weight: 500;
