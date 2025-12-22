@@ -2483,7 +2483,8 @@ main.page::after {
     left: -100%;
     top: 0;
     transition: left .3s;
-    z-index: 2
+    z-index: 2;
+    pointer-events: none
   }
   .menu-open .menu__body {
     left: 0
@@ -2508,7 +2509,11 @@ main.page::after {
     gap: 5px
   }
   .menu__list-2lvl {
-    padding-left: 20px
+    padding-left: 20px;
+    display: none
+  }
+  .menu__list-2lvl._active {
+    display: flex
   }
   .icon-menu {
     position: relative;
@@ -2746,7 +2751,7 @@ main.page::after {
     left: -62%
   }
   .catalog-categories__grid {
-    grid-template-columns: repeat(1,minmax(0,1fr))
+    grid-template-columns: repeat(1,minmax(0,1fr))!important
   }
   .category-card {
     aspect-ratio: auto!important;
